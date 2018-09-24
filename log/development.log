@@ -1,0 +1,1356 @@
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (3.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMovies (20150809022253)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /projects/rottenpotatoes-rails-intro/db/migrate/20150809022253_create_movies.rb:10)
+  [1m[35m (0.4ms)[0m  CREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150809022253"]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2018-09-24 22:55:17.670907"], ["updated_at", "2018-09-24 22:55:17.670907"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2018-09-24 22:55:17.675593"], ["updated_at", "2018-09-24 22:55:17.675593"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2018-09-24 22:55:17.683195"], ["updated_at", "2018-09-24 22:55:17.683195"]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-09-24 22:55:17.688395"], ["updated_at", "2018-09-24 22:55:17.688395"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2018-09-24 22:55:17.693252"], ["updated_at", "2018-09-24 22:55:17.693252"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2018-09-24 22:55:17.697304"], ["updated_at", "2018-09-24 22:55:17.697304"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2018-09-24 22:55:17.701402"], ["updated_at", "2018-09-24 22:55:17.701402"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2018-09-24 22:55:17.705443"], ["updated_at", "2018-09-24 22:55:17.705443"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2018-09-24 22:55:17.709410"], ["updated_at", "2018-09-24 22:55:17.709410"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2018-09-24 22:55:17.713502"], ["updated_at", "2018-09-24 22:55:17.713502"]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 22:55:54 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (13.4ms)
+Completed 200 OK in 305ms (Views: 295.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/default.self-2b9b4ceb35a4568bfbe3001eb6cf7d691787c8ec9b2018eecbc3c235cc74b7a4.css?body=1" for 128.198.216.35 at 2018-09-24 22:55:55 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 128.198.216.35 at 2018-09-24 22:55:55 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 128.198.216.35 at 2018-09-24 22:55:55 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 128.198.216.35 at 2018-09-24 22:55:55 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 128.198.216.35 at 2018-09-24 22:55:55 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 128.198.216.35 at 2018-09-24 22:55:55 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 22:56:01 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 22:57:47 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+NoMethodError (undefined method `include?' for nil:NilClass):
+  app/controllers/movies_controller.rb:17:in `block in index'
+  app/controllers/movies_controller.rb:17:in `index'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.3ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:02:09 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (12.1ms)
+Completed 200 OK in 166ms (Views: 157.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:02:13 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:02:59 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 171ms (Views: 162.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:03:02 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:04:39 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 162ms (Views: 153.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:04:42 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:06:27 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 169ms (Views: 160.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:06:31 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:06:33 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:06:34 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:06:36 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:07:47 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.haml within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/projects/rottenpotatoes-rails-intro/app/views/movies/index.html.haml:12: syntax error, unexpected '=', expecting ')'
+(( submit_tag 'Refresh', :id = "ratings_submit"
+                              ^):
+  app/views/movies/index.html.haml:12: syntax error, unexpected '=', expecting ')'
+
+
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /usr/local/bundle/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.6ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:08:07 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 166ms (Views: 157.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:08:10 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:08:11 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:09:35 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 168ms (Views: 159.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:09:37 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:09:41 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:09:43 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=date" for 128.198.216.35 at 2018-09-24 23:09:45 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:09:49 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=date" for 128.198.216.35 at 2018-09-24 23:09:52 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:15:56 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 165ms (Views: 156.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:15:58 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/7" for 128.198.216.35 at 2018-09-24 23:16:00 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered movies/show.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:16:02 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1" for 128.198.216.35 at 2018-09-24 23:16:02 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1"}}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/1" for 128.198.216.35 at 2018-09-24 23:16:06 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:16:08 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1" for 128.198.216.35 at 2018-09-24 23:16:08 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:16:42 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1" for 128.198.216.35 at 2018-09-24 23:16:42 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 159ms (Views: 158.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:17:25 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 14ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1" for 128.198.216.35 at 2018-09-24 23:17:25 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 168ms (Views: 167.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Aladdin"], ["rating", "G"], ["release_date", "1992-11-25 00:00:00.000000"], ["created_at", "2018-09-24 23:17:39.895666"], ["updated_at", "2018-09-24 23:17:39.895666"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Terminator"], ["rating", "R"], ["release_date", "1984-10-26 00:00:00.000000"], ["created_at", "2018-09-24 23:17:39.900342"], ["updated_at", "2018-09-24 23:17:39.900342"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "When Harry Met Sally"], ["rating", "R"], ["release_date", "1989-07-21 00:00:00.000000"], ["created_at", "2018-09-24 23:17:39.904301"], ["updated_at", "2018-09-24 23:17:39.904301"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Help"], ["rating", "PG-13"], ["release_date", "2011-08-10 00:00:00.000000"], ["created_at", "2018-09-24 23:17:39.908145"], ["updated_at", "2018-09-24 23:17:39.908145"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Chocolat"], ["rating", "PG-13"], ["release_date", "2001-01-05 00:00:00.000000"], ["created_at", "2018-09-24 23:17:39.911935"], ["updated_at", "2018-09-24 23:17:39.911935"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Amelie"], ["rating", "R"], ["release_date", "2001-04-25 00:00:00.000000"], ["created_at", "2018-09-24 23:17:39.915862"], ["updated_at", "2018-09-24 23:17:39.915862"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "2001: A Space Odyssey"], ["rating", "G"], ["release_date", "1968-04-06 00:00:00.000000"], ["created_at", "2018-09-24 23:17:39.919772"], ["updated_at", "2018-09-24 23:17:39.919772"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "The Incredibles"], ["rating", "PG"], ["release_date", "2004-11-05 00:00:00.000000"], ["created_at", "2018-09-24 23:17:39.923682"], ["updated_at", "2018-09-24 23:17:39.923682"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Raiders of the Lost Ark"], ["rating", "PG"], ["release_date", "1981-06-12 00:00:00.000000"], ["created_at", "2018-09-24 23:17:39.927826"], ["updated_at", "2018-09-24 23:17:39.927826"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "rating", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Chicken Run"], ["rating", "G"], ["release_date", "2000-06-21 00:00:00.000000"], ["created_at", "2018-09-24 23:17:39.932511"], ["updated_at", "2018-09-24 23:17:39.932511"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:17:44 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BPG%5D=1" for 128.198.216.35 at 2018-09-24 23:17:45 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "PG"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 154ms (Views: 152.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:17:48 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:17:51 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:19:58 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:19:59 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 160ms (Views: 159.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:20:04 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:20:07 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:22:30 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:22:30 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:24:07 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:24:07 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 172ms (Views: 170.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:24:11 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for 128.198.216.35 at 2018-09-24 23:24:16 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/show.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:24:17 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:24:17 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:24:23 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:24:27 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:24:27 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"PG-13"=>"1", "R"=>"1"}}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:24:55 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:24:55 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 164ms (Views: 163.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:25:02 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/4" for 128.198.216.35 at 2018-09-24 23:25:04 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered movies/show.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:25:06 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:25:06 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:25:09 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/10" for 128.198.216.35 at 2018-09-24 23:25:11 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:25:12 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1" for 128.198.216.35 at 2018-09-24 23:25:12 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"G"=>"1", "PG"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:25:15 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:25:36 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:25:36 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 160ms (Views: 158.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:26:18 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:26:18 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 163ms (Views: 162.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=date" for 128.198.216.35 at 2018-09-24 23:26:24 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for 128.198.216.35 at 2018-09-24 23:26:26 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/show.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:26:28 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?order_by=date&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:26:28 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"date", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=date" for 128.198.216.35 at 2018-09-24 23:26:30 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:26:38 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:27:08 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=title&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?order_by=title&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:27:08 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"title", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 138ms (Views: 136.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:27:13 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/7" for 128.198.216.35 at 2018-09-24 23:27:48 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered movies/show.html.haml within layouts/application (24.8ms)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/movies/7" for 128.198.216.35 at 2018-09-24 23:27:49 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QywvprxKwv89Oh8dMbuYaOI+bBmohBckcQoWFOmBPvWLngFjdyk6eMkiZVpzJMduoM9OTsWOIiiMQXnSCSEAuA==", "id"=>"7"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 7]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://node11.codenvy.io:34342/movies
+Completed 302 Found in 6ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:27:49 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:27:52 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/11" for 128.198.216.35 at 2018-09-24 23:27:54 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered movies/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/movies/11" for 128.198.216.35 at 2018-09-24 23:27:55 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"505PaU1/o5Ahg/HbYtQsbw8w0URN4S4dKwQGB/qoLCggL1eIa0gGp+pSVsctNn703ckiMcMH2pa8SUoxfdvErQ==", "id"=>"11"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 11]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Redirected to http://node11.codenvy.io:34342/movies
+Completed 302 Found in 6ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:27:56 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:27:59 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/6" for 128.198.216.35 at 2018-09-24 23:28:01 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/movies/6" for 128.198.216.35 at 2018-09-24 23:28:03 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pJ32BEvI7Q60FZOhzUOIe90S4JY8TiJshPQoDD3FgkKfkL0Z6qw06UARPhni+ai8caXBwp9ZyUUsErBzk4Axrw==", "id"=>"6"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 6]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://node11.codenvy.io:34342/movies
+Completed 302 Found in 5ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:28:03 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:28:04 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/10" for 128.198.216.35 at 2018-09-24 23:28:06 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/movies/10" for 128.198.216.35 at 2018-09-24 23:28:07 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gxzm7cnMgMcdrw74+tY7Kfj3ksoqfRAuU5ze3rIoxzfTa1w0UU47AUUkZniHulnxtEv8P+pSG5R2T1+wv+S1mw==", "id"=>"10"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 10]]
+  [1m[35m (4.9ms)[0m  commit transaction
+Redirected to http://node11.codenvy.io:34342/movies
+Completed 302 Found in 8ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:28:08 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:28:09 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/15" for 128.198.216.35 at 2018-09-24 23:28:11 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/movies/15" for 128.198.216.35 at 2018-09-24 23:28:12 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vtalmHN/SJWqp/VNKUdBEkKlDTkyKEnkg5I/6+Oy60l2A6Qa7OM4Ayjwqe3cYyyOqkxB9Mys2Qu0QFWXf9SAZg==", "id"=>"15"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 15]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 15]]
+  [1m[36m (990.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://node11.codenvy.io:34342/movies
+Completed 302 Found in 992ms (ActiveRecord: 990.5ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:28:13 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:28:14 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/19" for 128.198.216.35 at 2018-09-24 23:28:16 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 19]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/movies/19" for 128.198.216.35 at 2018-09-24 23:28:17 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1l9hSPxQVvXeLlkyFO8txGNCMOTWzYr3+HOpK4S0EwSIXPb1fpAG3+zHpgOQlyvbaawCrydjyFg6DE2P7etlfg==", "id"=>"19"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 19]]
+  [1m[35m (3.3ms)[0m  commit transaction
+Redirected to http://node11.codenvy.io:34342/movies
+Completed 302 Found in 6ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:28:18 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:28:19 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/14" for 128.198.216.35 at 2018-09-24 23:28:21 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/movies/14" for 128.198.216.35 at 2018-09-24 23:28:23 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"quf6TLn37PpAk3hNJh+92+MFKi7qjqB8KnMdEwomVWWPlvUTF8c6/Zn2cKrKeyB9xgtvBSxYiw1L+sQIn0bhFw==", "id"=>"14"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 14]]
+  [1m[36m (4.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://node11.codenvy.io:34342/movies
+Completed 302 Found in 7ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:28:23 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (40.4ms)
+Completed 200 OK in 58ms (Views: 57.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:28:24 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/8" for 128.198.216.35 at 2018-09-24 23:28:27 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 8]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/movies/8" for 128.198.216.35 at 2018-09-24 23:28:28 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XhrY11LObFSY4cC0/mgXwSvw6FEHz+91G67TorYaD4wVBtcsBYXQKlmiyxzaFjZmnj3Po339jG2jpW+Ve6klyQ==", "id"=>"8"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 8]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Redirected to http://node11.codenvy.io:34342/movies
+Completed 302 Found in 5ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:28:29 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:28:30 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for 128.198.216.35 at 2018-09-24 23:28:32 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/movies/2" for 128.198.216.35 at 2018-09-24 23:28:34 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/FCDuG/DibdE6oaG1Fw0GM8g5Y/x/e14iPeCEzfP/wvJYW3zefHMGhaZWG1dmmkHfQmPeD8L5QLwE/fi8w0OuA==", "id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 2]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://node11.codenvy.io:34342/movies
+Completed 302 Found in 6ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:28:34 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:28:35 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/3" for 128.198.216.35 at 2018-09-24 23:28:38 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/movies/3" for 128.198.216.35 at 2018-09-24 23:28:39 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"45HpBWtYY9nc3MF9D8hVMhNLYV6okFwFSzC0nS50oTToBnOPQU7wn4vVxYWHJ6PpIWHIVaOpGzPM6RGsjduthA==", "id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 3]]
+  [1m[35m (3.3ms)[0m  commit transaction
+Redirected to http://node11.codenvy.io:34342/movies
+Completed 302 Found in 5ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:28:39 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:28:41 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:28:43 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=date" for 128.198.216.35 at 2018-09-24 23:28:44 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"date"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:28:45 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:28:48 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:28:51 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:28:54 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/16" for 128.198.216.35 at 2018-09-24 23:28:55 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 16]]
+  Rendered movies/show.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 128.198.216.35 at 2018-09-24 23:28:57 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=title&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?order_by=title&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:28:57 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"title", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 128.198.216.35 at 2018-09-24 23:30:00 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+Redirected to http://node11.codenvy.io:34342/movies?order_by=title&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+Completed 302 Found in 23ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?order_by=title&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 128.198.216.35 at 2018-09-24 23:30:00 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"order_by"=>"title", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (65.9ms)
+Completed 200 OK in 359ms (Views: 357.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:30:02 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:30:08 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:30:09 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&commit=Refresh" for 128.198.216.35 at 2018-09-24 23:30:16 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?sort_by=title" for 128.198.216.35 at 2018-09-24 23:30:17 +0000
+Cannot render console from 128.198.216.35! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.2ms)
