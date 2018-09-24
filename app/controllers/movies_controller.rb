@@ -11,7 +11,32 @@ class MoviesController < ApplicationController
   end
   
   def index
+    @all_ratings = Movie.all_ratings
+    #If there are rating params, then save them to hash
+    unless params[:ratings].nil?
+      @saved_ratings = params[:ratings]
+      session[:saved_ratings] = @saved_ratings
+    end
+    #If there are sort_by params, then save them to hash
+    if params[:sort_by].nil?
+    else
+      session[:sort_by] = params[:sort_by]
+    end
+    #If no sort_by params, no rating params, and there are saved ratings
+    #Update local ratings and sort_by with that which was saved
+    if params[:sort_by].nil? && params[:ratings].nil? && session[:saved_ratings]
+      @saved_ratings = session[:saved_ratings]
+      @sort_by = session[:sort_by]
+      flash.keep
+      redirect_to movies_path({order_by: @sort_by, ratings: @saved_ratings})
+    end
+
     @movies = Movie.all
+
+    if session[:saved_ratings]
+      @movies = @movies.select{ |movie| session[:saved_ratings].include? movie.rating }
+    end
+    
     if params[:sort_by] == "title"
         @movies = @movies.sort {|a,b| a.title <=> b.title}
         @movie_hilite = "hilite"
@@ -46,6 +71,7 @@ class MoviesController < ApplicationController
   def destroy
     @movie = Movie.find(params[:id])
     @movie.destroy
+    session.clear
     flash[:notice] = "Movie '#{@movie.title}' deleted."
     redirect_to movies_path
   end
